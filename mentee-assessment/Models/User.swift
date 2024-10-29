@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct User {
+    let id: UUID
+    let name: String
+    let profileImageName: String
+    var pokeModel: PokeModel
+}

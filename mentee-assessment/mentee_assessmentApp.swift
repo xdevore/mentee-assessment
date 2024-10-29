@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct mentee_assessmentApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TimelineView()
         }
     }
 }

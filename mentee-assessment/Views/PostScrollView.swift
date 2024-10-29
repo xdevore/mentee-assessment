@@ -7,13 +7,15 @@
 
 import SwiftUI
 
-struct PostView: View {
+struct PostScrollView: View {
     
     let uploads: [Upload]
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .leading, spacing: 8) {
+                
+                // iterates through each post in uploads, creates section for them in the timeline
                 ForEach(uploads, id: \.id) { upload in
                     HStack {
                         Image(upload.user.profileImageName)
@@ -26,7 +28,6 @@ struct PostView: View {
                             .foregroundColor(.gray)
                             .font(.title2)
                     }
-                    // isPoked: SampleData.currentUser.pokedList.contains(user.id)
                     Image(upload.uploadedImageName)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
@@ -43,8 +44,8 @@ struct PostView: View {
     }
 }
 
-struct PostView_Previews: PreviewProvider {
+struct PostScrollView_Previews: PreviewProvider {
     static var previews: some View {
-        PostView(uploads: SampleData.uploads)
+        PostScrollView(uploads: SampleData.uploads)
     }
 }

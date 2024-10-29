@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct Upload {
+    let id: UUID
+    let user: User
+    let uploadedImageName: String
+    let uploadTime: Date
+    let reactions: Int
+    let reactionIds: [UUID]
+}
